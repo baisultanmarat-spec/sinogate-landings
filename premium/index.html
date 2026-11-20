@@ -120,6 +120,9 @@ html[lang=zh] .about-grid .quote{font-family:"Noto Sans SC",sans-serif;font-styl
 .office h4{font-size:12px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;font-weight:600}
 .office .big{display:block;font-size:24px;font-weight:500}
 .office p{color:var(--muted);font-size:14px}
+.office p.addr{color:var(--text);font-size:15px;line-height:1.55}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px 24px}
+.cgrid .big{font-size:20px;overflow-wrap:anywhere}
 .contact .btn-wa{margin-top:34px}
 form{border:1px solid var(--line);padding:44px;background:var(--navy-950)}
 form h3{font-size:24px;margin-bottom:8px}
@@ -148,6 +151,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   section{padding:80px 0}
 }
 @media (max-width:600px){
+  .cgrid{grid-template-columns:1fr;gap:20px}
   .wrap{padding:0 16px}
   .nav{height:72px;gap:10px}
   .menu.open{top:72px}
@@ -314,9 +318,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <h2 data-i="con_title"></h2>
       <p data-i="con_text"></p>
       <div class="offices">
-        <div class="office"><h4>SINOGATE GROUP LIMITED</h4><span class="big">Hong Kong</span><p>www.sinogate.group</p></div>
-        <div class="office"><h4>WhatsApp</h4><a class="big" href="https://wa.me/77000000107" target="_blank" rel="noopener">+7 700 000 01 07</a></div>
-        <div class="office"><h4 data-i="phone"></h4><a class="big" href="tel:+77770014111">+7 777 001 41 11</a></div>
+        <div class="cgrid">
+          <div class="office"><h4 data-i="phone"></h4><a class="big" href="tel:+77000000107">+7 700 000 0107</a></div>
+          <div class="office"><h4>WhatsApp</h4><a class="big" href="https://wa.me/77000000107" target="_blank" rel="noopener">+7 700 000 0107</a></div>
+          <div class="office"><h4>E-mail</h4><a class="big" href="mailto:info@sinogate.group">info@sinogate.group</a></div>
+          <div class="office"><h4>WeChat</h4><span class="big">Aidyn_Katashev</span></div>
+        </div>
+        <div class="office"><h4 data-i="addr_hq"></h4><p class="addr">Flat E15, 10/F, Wong King Industrial Building,<br>2-4 Tai Yau Street, San Po Kong, Hong Kong</p></div>
+        <div class="office"><h4 data-i="addr_kh"></h4><p class="addr">Room 278, 2F, Integrated Operation Center, Cross-border E-commerce Industrial Park,<br>Xinjiang Ili Kazakh Autonomous Prefecture, Khorgas Zone, China (Xinjiang) Pilot Free Trade Zone</p></div>
       </div>
       <a class="btn btn-line btn-wa" href="https://wa.me/77000000107" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
@@ -342,7 +351,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 </section>
 
 <footer>
-  <div class="wrap"><span>© 2026 SINOGATE GROUP LIMITED. Connecting Markets. Moving Business Forward.</span><span>Hong Kong · www.sinogate.group</span></div>
+  <div class="wrap"><span>© 2026 SINOGATE GROUP LIMITED. Connecting Markets. Moving Business Forward.</span><span>Hong Kong · Khorgos · info@sinogate.group</span></div>
 </footer>
 
 <script>
@@ -365,9 +374,9 @@ s4t:'Проектная логистика',s4p:'Разработка индив
 s5t:'Транспортное экспедирование',s5p:'Сопровождение перевозок, взаимодействие с отправителями, перевозчиками, терминалами и получателями.',
 s6t:'Логистика Китай — Казахстан',s6p:'Организация трансграничных поставок с учётом маршрутов, терминальных операций и особенностей грузов.',
 cor_eyebrow:'Маршруты',cor_title:'Соединяем Китай, Казахстан <span class="serif gold">и Центральную Азию</span>',
-cor_text:'Наш основной фокус — международные маршруты между китайскими производственными центрами, Казахстаном и странами Центральной Азии. Мы развиваем партнёрские решения для трансграничной и транзитной логистики.',
+cor_text:'Наш основной фокус — международные маршруты между китайскими производственными центрами, Казахстаном и странами Центральной Азии через Хоргос и Алашанькоу. Мы развиваем партнёрские решения для трансграничной и транзитной логистики.',
 route_label:'Транспортный коридор',
-r1b:'Китай',r1s:'Производственные центры, приём груза у отправителя',r2b:'Пограничный переход',r2s:'Терминальные операции и перегрузка',r3b:'Казахстан',r3s:'Доставка получателю или транзит',r4b:'Центральная Азия',r4s:'Транзитные поставки в страны региона',
+r1b:'Китай',r1s:'Производственные центры, приём груза у отправителя',r2b:'Хоргос · Алашанькоу',r2s:'Пограничные переходы, терминальные операции и перегрузка',r3b:'Казахстан',r3s:'Доставка получателю или транзит',r4b:'Центральная Азия',r4s:'Транзитные поставки в страны региона',
 why_eyebrow:'Преимущества',why_title:'Почему выбирают <span class="serif gold">SINOGATE</span>',
 w1t:'Международный подход',w1p:'Гонконгская корпоративная структура и ориентация на международные рынки.',
 w2t:'Гибкость решений',w2p:'Подбор маршрутов и транспортных схем под характеристики груза.',
@@ -376,7 +385,7 @@ w4t:'Прозрачность',w4p:'Согласование условий, о�
 proc_eyebrow:'Процесс',proc_title:'Как мы <span class="serif gold">работаем</span>',
 p1:'Получаем заявку и параметры груза',p2:'Анализируем маршрут и рассчитываем предложение',p3:'Согласовываем условия перевозки',p4:'Организуем и координируем доставку',p5:'Сопровождаем завершение поставки',
 con_title:'Обсудим <span class="serif gold">вашу перевозку</span>',con_text:'Отправьте параметры груза и маршрут. Мы рассмотрим ваш запрос и предложим подходящее логистическое решение.',
-phone:'Телефон',wa_btn:'Связаться через WhatsApp',
+phone:'Телефон',addr_hq:'Головной офис · Гонконг',addr_kh:'Офис в Хоргосе',wa_btn:'Связаться через WhatsApp',
 form_title:'Запрос на перевозку',form_lead:'Заполните форму — заявка уйдёт нам в WhatsApp',
 fl_name:'Ваше имя',fl_company:'Компания',fl_contact:'Телефон или email',fl_route:'Маршрут перевозки',fl_route_ph:'Например: Гуанчжоу — Алматы',fl_cargo:'Описание груза',fl_cargo_ph:'Тип груза, вес, объём, сроки',fl_submit:'Отправить запрос',
 form_note:'Нажимая кнопку, вы откроете WhatsApp с готовым текстом заявки.',
@@ -400,9 +409,9 @@ s4t:'Project logistics',s4p:'Tailored transport solutions for industrial equipme
 s5t:'Freight forwarding',s5p:'End-to-end shipment support and liaison with shippers, carriers, terminals and consignees.',
 s6t:'China — Kazakhstan logistics',s6p:'Cross-border supply organised around routes, terminal operations and cargo specifics.',
 cor_eyebrow:'Routes',cor_title:'Connecting China, Kazakhstan <span class="serif gold">and Central Asia</span>',
-cor_text:'Our core focus is international routes linking China’s manufacturing hubs with Kazakhstan and the countries of Central Asia. We develop partnership-based solutions for cross-border and transit logistics.',
+cor_text:'Our core focus is international routes linking China’s manufacturing hubs with Kazakhstan and the countries of Central Asia via Khorgos and Alashankou. We develop partnership-based solutions for cross-border and transit logistics.',
 route_label:'Transport corridor',
-r1b:'China',r1s:'Manufacturing hubs, pick-up from the shipper',r2b:'Border crossing',r2s:'Terminal operations and transshipment',r3b:'Kazakhstan',r3s:'Delivery to consignee or transit',r4b:'Central Asia',r4s:'Transit supply across the region',
+r1b:'China',r1s:'Manufacturing hubs, pick-up from the shipper',r2b:'Khorgos · Alashankou',r2s:'Border crossings, terminal operations and transshipment',r3b:'Kazakhstan',r3s:'Delivery to consignee or transit',r4b:'Central Asia',r4s:'Transit supply across the region',
 why_eyebrow:'Why us',why_title:'Why choose <span class="serif gold">SINOGATE</span>',
 w1t:'International approach',w1p:'Hong Kong corporate structure and a focus on international markets.',
 w2t:'Flexible solutions',w2p:'Routes and transport schemes selected for the characteristics of your cargo.',
@@ -411,7 +420,7 @@ w4t:'Transparency',w4p:'Clearly agreed terms, responsibilities and key milestone
 proc_eyebrow:'Process',proc_title:'How we <span class="serif gold">work</span>',
 p1:'We receive your request and cargo details',p2:'We analyse the route and prepare an offer',p3:'We agree the terms of carriage',p4:'We organise and coordinate delivery',p5:'We support the shipment through completion',
 con_title:'Let’s discuss <span class="serif gold">your shipment</span>',con_text:'Send us your cargo details and route. We will review your request and propose the right logistics solution.',
-phone:'Phone',wa_btn:'Contact us on WhatsApp',
+phone:'Phone',addr_hq:'Head office · Hong Kong',addr_kh:'Khorgos office',wa_btn:'Contact us on WhatsApp',
 form_title:'Shipment request',form_lead:'Fill in the form — your request will be sent to us via WhatsApp',
 fl_name:'Your name',fl_company:'Company',fl_contact:'Phone or email',fl_route:'Route',fl_route_ph:'e.g. Guangzhou — Almaty',fl_cargo:'Cargo description',fl_cargo_ph:'Cargo type, weight, volume, timing',fl_submit:'Send request',
 form_note:'The button opens WhatsApp with your request pre-filled.',
@@ -435,9 +444,9 @@ s4t:'项目物流',s4p:'为工业设备、重型及超限货物定制运输方�
 s5t:'货运代理',s5p:'全程跟进运输，与发货人、承运商、场站及收货人对接。',
 s6t:'中国—哈萨克斯坦物流',s6p:'综合考虑线路、场站作业及货物特点，组织跨境运输。',
 cor_eyebrow:'线路',cor_title:'连接中国、哈萨克斯坦<span class="serif gold">与中亚</span>',
-cor_text:'我们的核心业务是连接中国制造中心与哈萨克斯坦及中亚各国的国际线路，并为跨境及过境物流发展合作型解决方案。',
+cor_text:'我们的核心业务是连接中国制造中心经霍尔果斯和阿拉山口通往哈萨克斯坦及中亚各国的国际线路，并为跨境及过境物流发展合作型解决方案。',
 route_label:'运输走廊',
-r1b:'中国',r1s:'制造中心，发货人处提货',r2b:'边境口岸',r2s:'场站作业与换装',r3b:'哈萨克斯坦',r3s:'送达收货人或过境',r4b:'中亚',r4s:'向区域各国过境运输',
+r1b:'中国',r1s:'制造中心，发货人处提货',r2b:'霍尔果斯 · 阿拉山口',r2s:'边境口岸、场站作业与换装',r3b:'哈萨克斯坦',r3s:'送达收货人或过境',r4b:'中亚',r4s:'向区域各国过境运输',
 why_eyebrow:'优势',why_title:'为什么选择 <span class="serif gold">SINOGATE</span>',
 w1t:'国际化视野',w1p:'香港公司架构，面向国际市场。',
 w2t:'灵活的方案',w2p:'根据货物特点选择线路与运输方案。',
@@ -446,7 +455,7 @@ w4t:'透明可靠',w4p:'明确约定运输条件、责任与关键环节。',
 proc_eyebrow:'流程',proc_title:'<span class="serif gold">合作流程</span>',
 p1:'接收询价及货物信息',p2:'分析线路并制定报价',p3:'确认运输条件',p4:'组织并协调运输',p5:'跟进直至交付完成',
 con_title:'洽谈<span class="serif gold">您的运输需求</span>',con_text:'请发送货物信息及运输线路，我们将评估您的需求并提供合适的物流方案。',
-phone:'电话',wa_btn:'通过 WhatsApp 联系',
+phone:'电话',addr_hq:'总部 · 香港',addr_kh:'霍尔果斯办公室',wa_btn:'通过 WhatsApp 联系',
 form_title:'运输询价',form_lead:'填写表格，询价将通过 WhatsApp 发送给我们',
 fl_name:'您的姓名',fl_company:'公司',fl_contact:'电话或邮箱',fl_route:'运输线路',fl_route_ph:'例如：广州 — 阿拉木图',fl_cargo:'货物描述',fl_cargo_ph:'货物类型、重量、体积、时效',fl_submit:'提交询价',
 form_note:'点击按钮将打开 WhatsApp 并自动填写询价内容。',
