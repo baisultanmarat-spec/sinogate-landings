@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sinogate Group — международные перевозки</title>
+<title>SINOGATE GROUP LIMITED — международная логистика</title>
+<meta name="description" content="SINOGATE GROUP LIMITED — международная логистика между Китаем, Казахстаном и Центральной Азией: автомобильные, железнодорожные, мультимодальные и проектные перевозки.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy-950:#060d1d;--navy-900:#0a1428;--navy-800:#0f1d38;--navy-700:#172a4d;
@@ -16,330 +17,462 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Montserrat,system-ui,sans-serif;background:var(--navy-950);color:var(--text);line-height:1.6;overflow-x:hidden}
+body{font-family:Montserrat,"Noto Sans SC",system-ui,sans-serif;background:var(--navy-950);color:var(--text);line-height:1.6;overflow-x:hidden}
+html[lang=zh] body{font-family:"Noto Sans SC",Montserrat,system-ui,sans-serif}
+html[lang=zh] .serif{font-family:"Noto Sans SC",sans-serif;font-style:normal;font-weight:500}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 .gold{color:var(--gold)}
 .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:600}
-h1,h2,h3{font-weight:500;line-height:1.15}
+h1,h2,h3{font-weight:500;line-height:1.15;text-wrap:balance}
 h2{font-size:clamp(30px,4vw,46px);margin:14px 0 18px}
 .serif{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:2px;transition:.25s;cursor:pointer;border:0}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:2px;transition:.25s;cursor:pointer;border:0;font-family:inherit}
 .btn-gold{background:linear-gradient(135deg,var(--gold-light),var(--gold) 50%,var(--gold-dark));color:var(--navy-950)}
 .btn-gold:hover{filter:brightness(1.1);transform:translateY(-1px)}
-.btn-line{border:1px solid var(--line);color:var(--text)}
+.btn-line{border:1px solid var(--line);color:var(--text);background:transparent}
 .btn-line:hover{border-color:var(--gold);color:var(--gold)}
+.btn svg{width:18px;height:18px;flex:none}
 
-/* header */
 header{position:fixed;inset:0 0 auto;z-index:50;transition:.3s}
 header.scrolled{background:rgba(6,13,29,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
-.brand{display:flex;align-items:center;gap:14px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;flex:none}
 .brand img{height:40px}
 .brand .sep{width:1px;height:34px;background:var(--gold);opacity:.6}
-.brand b{display:block;font-weight:500;letter-spacing:.2em;font-size:17px}
-.brand small{display:block;color:var(--gold);letter-spacing:.5em;font-size:10px;margin-top:-2px}
-.menu{display:flex;gap:34px;font-size:13px;letter-spacing:.08em;color:var(--muted)}
+.brand b{display:block;font-weight:500;letter-spacing:.2em;font-size:17px;line-height:1.3}
+.brand small{display:block;color:var(--gold);letter-spacing:.32em;font-size:9.5px}
+.menu{display:flex;gap:30px;font-size:13px;letter-spacing:.06em;color:var(--muted)}
 .menu a:hover{color:var(--gold)}
-.nav-cta{display:flex;align-items:center;gap:22px}
-.phone{font-weight:600;font-size:15px}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.langs{display:flex;border:1px solid var(--line);border-radius:2px}
+.langs button{background:none;border:0;color:var(--muted);font:600 12px Montserrat,"Noto Sans SC",sans-serif;letter-spacing:.08em;padding:8px 11px;cursor:pointer}
+.langs button.on{background:var(--gold);color:var(--navy-950)}
 .burger{display:none;background:none;border:0;color:var(--text);font-size:26px;cursor:pointer}
 
-/* hero */
-.hero{position:relative;min-height:min(100vh,1000px);display:flex;align-items:center;padding:140px 0 320px;overflow:hidden;
+.hero{position:relative;min-height:min(100vh,1000px);display:flex;align-items:center;padding:150px 0 330px;overflow:hidden;
   background:radial-gradient(ellipse at 70% 0%,#1b2f58 0%,transparent 55%),var(--navy-950)}
 .hero .globe-cv{position:absolute;left:0;right:0;bottom:0;width:100%;height:360px;display:block;
   -webkit-mask:linear-gradient(to top,#000 75%,transparent);mask:linear-gradient(to top,#000 75%,transparent)}
 .hero .wrap{position:relative;z-index:2;width:100%}
-.hero h1{font-size:clamp(38px,6vw,78px);letter-spacing:-.01em;max-width:920px;margin:22px 0 26px}
-.hero p.lead{max-width:600px;color:#b7c1d4;font-size:18px;text-shadow:0 2px 12px rgba(6,13,29,.9)}
+.hero h1{font-size:clamp(36px,5.6vw,74px);letter-spacing:-.01em;max-width:960px;margin:22px 0 26px}
+.hero p.lead{max-width:640px;color:#b7c1d4;font-size:18px;text-shadow:0 2px 12px rgba(6,13,29,.9)}
 .hero .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
-.tagline{position:absolute;z-index:2;bottom:36px;left:0;right:0;text-align:center;font-size:12px;letter-spacing:.5em;color:var(--text);opacity:.8}
+.tagline{position:absolute;z-index:2;bottom:36px;left:0;right:0;text-align:center;font-size:12px;letter-spacing:.5em;color:var(--text);opacity:.9;text-transform:uppercase;padding:0 16px;text-shadow:0 1px 8px #060d1d,0 0 2px #060d1d}
 
-/* stats */
-.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--navy-900)}
-.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:44px 24px;border-right:1px solid var(--line)}
-.stat:last-child{border-right:0}
-.stat b{display:block;font-family:"Cormorant Garamond",serif;font-size:56px;font-weight:500;color:var(--gold-light);line-height:1}
-.stat span{color:var(--muted);font-size:13px;letter-spacing:.06em}
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--navy-900)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:36px 24px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:500;color:var(--gold-light);line-height:1.1;margin-bottom:6px}
+html[lang=zh] .fact b{font-family:"Noto Sans SC",sans-serif;font-size:24px}
+.fact span{color:var(--muted);font-size:13px;letter-spacing:.04em}
 
 section{padding:120px 0}
 .head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:64px}
 .head p{color:var(--muted)}
+.head.solo{grid-template-columns:1fr;margin-bottom:48px}
 
-/* services */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
+.about-grid p{color:var(--muted);font-size:16.5px}
+.about-grid .quote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:32px;line-height:1.35;color:var(--gold-light);border-left:2px solid var(--gold);padding-left:28px}
+html[lang=zh] .about-grid .quote{font-family:"Noto Sans SC",sans-serif;font-style:normal;font-size:24px}
+.quote small{display:block;font-family:Montserrat,sans-serif;font-style:normal;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+
 .services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.svc{background:var(--navy-950);padding:44px 36px;position:relative;transition:.35s}
+.svc{background:var(--navy-950);padding:44px 36px;transition:.35s}
 .svc:hover{background:var(--navy-800)}
 .svc .num{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:20px}
-.svc svg{width:44px;height:44px;stroke:var(--gold);fill:none;stroke-width:1.3;margin:22px 0}
+.svc svg{width:44px;height:44px;stroke:var(--gold);fill:none;stroke-width:1.3;margin:22px 0;stroke-linejoin:round;stroke-linecap:round}
 .svc h3{font-size:21px;margin-bottom:12px}
 .svc p{color:var(--muted);font-size:14.5px}
 
-/* agent */
-.agent{background:linear-gradient(180deg,var(--navy-900),var(--navy-950))}
-.agent-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center}
-.checks{list-style:none;display:grid;gap:18px;margin-top:34px}
-.checks li{display:flex;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--line)}
-.checks li::before{content:"";flex:0 0 8px;height:8px;margin-top:9px;background:var(--gold);transform:rotate(45deg)}
-.checks b{display:block;font-weight:600;margin-bottom:2px}
-.checks span{color:var(--muted);font-size:14.5px}
+.corridor{background:linear-gradient(180deg,var(--navy-900),var(--navy-950))}
+.corridor-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center}
+.corridor-grid > div > p{color:var(--muted);font-size:16.5px}
 .route-card{border:1px solid var(--line);padding:40px;background:rgba(15,29,56,.6);position:relative}
-.route-card::before{content:"";position:absolute;inset:-1px;border:1px solid transparent;border-image:linear-gradient(135deg,var(--gold),transparent 40%,transparent 60%,var(--gold)) 1}
-.route{display:grid;gap:0;margin-top:24px}
-.stop{display:grid;grid-template-columns:22px 1fr auto;gap:18px;align-items:start;position:relative;padding-bottom:26px}
-.stop:not(:last-child)::after{content:"";position:absolute;left:10px;top:20px;bottom:0;width:1px;background:repeating-linear-gradient(to bottom,var(--gold) 0 4px,transparent 4px 9px)}
+.route{display:grid;margin-top:24px}
+.stop{display:grid;grid-template-columns:22px 1fr;gap:18px;align-items:start;position:relative;padding-bottom:26px}
+.stop:last-child{padding-bottom:0}
+.stop:not(:last-child)::after{content:"";position:absolute;left:10px;top:22px;bottom:0;width:1px;background:repeating-linear-gradient(to bottom,var(--gold) 0 4px,transparent 4px 9px)}
 .dot{width:21px;height:21px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center}
 .dot::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
 .stop b{display:block;font-weight:600}
-.stop span{color:var(--muted);font-size:13px}
-.stop em{font-style:normal;color:var(--gold);font-size:13px;white-space:nowrap}
+.stop span{color:var(--muted);font-size:13.5px}
 
-/* about */
-.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px}
-.quote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:30px;line-height:1.35;color:var(--gold-light);border-left:2px solid var(--gold);padding-left:28px;margin-top:30px}
-.timeline{display:grid;gap:0}
-.tl{display:grid;grid-template-columns:110px 1fr;gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
-.tl:first-child{border-top:1px solid var(--line)}
-.tl b{font-family:"Cormorant Garamond",serif;font-size:36px;color:var(--gold);font-weight:500;line-height:1}
-.tl h4{font-size:17px;font-weight:600;margin-bottom:4px}
-.tl p{color:var(--muted);font-size:14.5px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why-item{border-top:1px solid var(--gold);padding-top:26px}
+.why-item svg{width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1.4;stroke-linejoin:round;stroke-linecap:round;margin-bottom:18px}
+.why-item h4{font-size:18px;font-weight:600;margin-bottom:8px}
+.why-item p{color:var(--muted);font-size:14.5px}
 
-/* steps */
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;counter-reset:s}
-.step{border-top:1px solid var(--gold);padding-top:24px;counter-increment:s}
-.step::before{content:"0" counter(s);font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:28px;display:block;margin-bottom:12px}
-.step h4{font-size:16px;font-weight:600;margin-bottom:8px}
-.step p{color:var(--muted);font-size:14px}
+.step{border-top:1px solid var(--line);padding-top:24px;counter-increment:s}
+.step::before{content:"0" counter(s);font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:34px;display:block;margin-bottom:10px;line-height:1}
+.step h4{font-size:16px;font-weight:600}
 
-/* contacts */
 .contact{background:var(--navy-900);border-top:1px solid var(--line)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
-.offices{display:grid;gap:28px;margin-top:36px}
-.office h4{font-size:12px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:8px;font-weight:600}
-.office a.tel{display:block;font-size:24px;font-weight:500}
+.contact-grid > div > p{color:var(--muted)}
+.offices{display:grid;gap:26px;margin-top:36px}
+.office h4{font-size:12px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;font-weight:600}
+.office .big{display:block;font-size:24px;font-weight:500}
 .office p{color:var(--muted);font-size:14px}
+.contact .btn-wa{margin-top:34px}
 form{border:1px solid var(--line);padding:44px;background:var(--navy-950)}
 form h3{font-size:24px;margin-bottom:8px}
 form > p{color:var(--muted);font-size:14px;margin-bottom:26px}
 .field{margin-bottom:18px}
 .field label{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.field input,.field select,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--text);font:inherit;padding:10px 0;outline:none}
-.field select option{background:var(--navy-900)}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field input,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--text);font:inherit;padding:10px 0;outline:none;resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--gold)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-form .btn{width:100%;justify-content:center;margin-top:14px}
-.sent{display:none;color:var(--gold-light);margin-top:16px;font-size:14px}
+form .btn{width:100%;margin-top:14px}
+.form-note{color:var(--muted);font-size:12.5px;margin-top:14px}
 
 footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
-.reveal{transition:transform .8s}
-
+@media (max-width:1100px){.menu{gap:20px}}
 @media (max-width:980px){
-  .menu{display:none}.phone{display:none}.burger{display:block}
+  .menu{display:none}.burger{display:block}
   .menu.open{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:var(--navy-950);padding:24px;border-bottom:1px solid var(--line);gap:18px}
-  .head,.agent-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .head,.about-grid,.corridor-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
   .services{grid-template-columns:1fr 1fr}
-  .stats .wrap{grid-template-columns:1fr 1fr}
-  .stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .facts .wrap,.why{grid-template-columns:1fr 1fr}
+  .fact:nth-child(2){border-right:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .why{row-gap:40px}
   .steps{grid-template-columns:1fr 1fr}
   section{padding:80px 0}
 }
 @media (max-width:600px){
   .wrap{padding:0 16px}
-  .services,.steps,.row2{grid-template-columns:1fr}
-  .nav-cta .btn{display:none}
-  .stat{padding:28px 14px}.stat b{font-size:40px}
+  .nav{height:72px;gap:10px}
+  .menu.open{top:72px}
+  .brand{gap:10px}.brand img{height:32px}.brand .sep{display:none}
+  .brand b{font-size:14px;letter-spacing:.14em}.brand small{font-size:8px;letter-spacing:.2em}
+  .nav-cta{gap:8px}.nav-cta .btn{display:none}
+  .langs button{padding:7px 8px;font-size:11px}
+  .services,.steps,.row2,.why{grid-template-columns:1fr}
+  .facts .wrap{grid-template-columns:1fr 1fr}
+  .fact{padding:22px 12px}.fact b{font-size:22px}.fact span{font-size:12px}
   form{padding:28px 20px}
-  .tl{grid-template-columns:76px 1fr;gap:16px}.tl b{font-size:28px}
-  .tagline{letter-spacing:.25em;font-size:10px}
-  .hero{padding-bottom:250px}
+  .route-card{padding:28px 20px}
+  .about-grid .quote{font-size:25px;padding-left:20px}
+  .tagline{letter-spacing:.12em;font-size:9px;bottom:22px}
+  .hero{padding:120px 0 250px}
+  .hero p.lead{font-size:16px}
   .hero .globe-cv{height:260px}
-  .brand b{font-size:15px}
+  .hero .actions .btn{flex:1 1 100%}
+  .office .big{font-size:21px}
 }
 </style>
 </head>
 <body>
 
-<header id="top">
+<header>
   <div class="wrap nav">
     <a href="#" class="brand">
-      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii02IC02IDYxMiA3MjIiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZzEiIHgxPSIwIiB5MT0iMCIgeDI9IjYwMCIgeTI9IjcxMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2YyZDlhNCIvPjxzdG9wIG9mZnNldD0iLjM1IiBzdG9wLWNvbG9yPSIjY2ZhMjY1Ii8+PHN0b3Agb2Zmc2V0PSIuNiIgc3RvcC1jb2xvcj0iI2U2Yzc4ZCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2E4N2I0MCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJnMiIgeDE9IjAiIHkxPSIzMDAiIHgyPSI0NzAiIHkyPSI1MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM4ZjY1MzEiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjYzU5NzVhIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZTljYzkyIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImczIiB4MT0iNjAwIiB5MT0iNDEwIiB4Mj0iMTMwIiB5Mj0iMjEwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjOGY2NTMxIi8+PHN0b3Agb2Zmc2V0PSIuNSIgc3RvcC1jb2xvcj0iI2M1OTc1YSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2U5Y2M5MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGZpbGw9InVybCgjZzEpIiBkPSJNNjAwLjAsMjQwLjAgTDYwMC4wLDE0MC4wIEwzMDAuMCwwLjAgTDAuMCwxNDAuMCBMMC4wLDM0MC4wIEwzNTAuMCw1MDMuMyBMNDYyLjUsNDUwLjggTDY4LjAsMjY2LjcgTDY4LjAsMjE4LjIgTDMwMC4wLDExMC4wIEw1MzIuMCwyMTguMiBMNTMyLjAsMjQwLjBaIE0wLjAsNDcwLjAgTDAuMCw1NzAuMCBMMzAwLjAsNzEwLjAgTDYwMC4wLDU3MC4wIEw2MDAuMCwzNzAuMCBMMjUwLjAsMjA2LjcgTDEzNy41LDI1OS4yIEw1MzIuMCw0NDMuMyBMNTMyLjAsNDkxLjggTDMwMC4wLDYwMC4wIEw2OC4wLDQ5MS44IEw2OC4wLDQ3MC4wWiIvPjxwYXRoIGZpbGw9InVybCgjZzIpIiBkPSJNMC4wLDMwNS4wIEwwLjAsMzQwLjAgTDM1MC4wLDUwMy4zIEw0NjIuNSw0NTAuOCBMNjguMCwyNjYuNyBMNjguMCwyOTAuMFoiLz48cGF0aCBmaWxsPSJ1cmwoI2czKSIgZD0iTTYwMC4wLDQwNS4wIEw2MDAuMCwzNzAuMCBMMjUwLjAsMjA2LjcgTDEzNy41LDI1OS4yIEw1MzIuMCw0NDMuMyBMNTMyLjAsNDIwLjBaIi8+PC9zdmc+" alt="Sinogate Group">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii02IC02IDYxMiA3MjIiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZzEiIHgxPSIwIiB5MT0iMCIgeDI9IjYwMCIgeTI9IjcxMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2YyZDlhNCIvPjxzdG9wIG9mZnNldD0iLjM1IiBzdG9wLWNvbG9yPSIjY2ZhMjY1Ii8+PHN0b3Agb2Zmc2V0PSIuNiIgc3RvcC1jb2xvcj0iI2U2Yzc4ZCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2E4N2I0MCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJnMiIgeDE9IjAiIHkxPSIzMDAiIHgyPSI0NzAiIHkyPSI1MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM4ZjY1MzEiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjYzU5NzVhIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZTljYzkyIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImczIiB4MT0iNjAwIiB5MT0iNDEwIiB4Mj0iMTMwIiB5Mj0iMjEwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjOGY2NTMxIi8+PHN0b3Agb2Zmc2V0PSIuNSIgc3RvcC1jb2xvcj0iI2M1OTc1YSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2U5Y2M5MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGZpbGw9InVybCgjZzEpIiBkPSJNNjAwLjAsMjQwLjAgTDYwMC4wLDE0MC4wIEwzMDAuMCwwLjAgTDAuMCwxNDAuMCBMMC4wLDM0MC4wIEwzNTAuMCw1MDMuMyBMNDYyLjUsNDUwLjggTDY4LjAsMjY2LjcgTDY4LjAsMjE4LjIgTDMwMC4wLDExMC4wIEw1MzIuMCwyMTguMiBMNTMyLjAsMjQwLjBaIE0wLjAsNDcwLjAgTDAuMCw1NzAuMCBMMzAwLjAsNzEwLjAgTDYwMC4wLDU3MC4wIEw2MDAuMCwzNzAuMCBMMjUwLjAsMjA2LjcgTDEzNy41LDI1OS4yIEw1MzIuMCw0NDMuMyBMNTMyLjAsNDkxLjggTDMwMC4wLDYwMC4wIEw2OC4wLDQ5MS44IEw2OC4wLDQ3MC4wWiIvPjxwYXRoIGZpbGw9InVybCgjZzIpIiBkPSJNMC4wLDMwNS4wIEwwLjAsMzQwLjAgTDM1MC4wLDUwMy4zIEw0NjIuNSw0NTAuOCBMNjguMCwyNjYuNyBMNjguMCwyOTAuMFoiLz48cGF0aCBmaWxsPSJ1cmwoI2czKSIgZD0iTTYwMC4wLDQwNS4wIEw2MDAuMCwzNzAuMCBMMjUwLjAsMjA2LjcgTDEzNy41LDI1OS4yIEw1MzIuMCw0NDMuMyBMNTMyLjAsNDIwLjBaIi8+PC9zdmc+" alt="SINOGATE GROUP LIMITED">
       <span class="sep"></span>
-      <span><b>SINOGATE</b><small>GROUP</small></span>
+      <span><b>SINOGATE</b><small>GROUP LIMITED</small></span>
     </a>
     <nav class="menu" id="menu">
-      <a href="#services">Услуги</a>
-      <a href="#agent">Агентские услуги</a>
-      <a href="#about">О компании</a>
-      <a href="#process">Как работаем</a>
-      <a href="#contacts">Контакты</a>
+      <a href="#about" data-i="nav_about"></a>
+      <a href="#services" data-i="nav_services"></a>
+      <a href="#corridor" data-i="nav_routes"></a>
+      <a href="#process" data-i="nav_process"></a>
+      <a href="#contacts" data-i="nav_contacts"></a>
     </nav>
     <div class="nav-cta">
-      <a class="phone" href="tel:+77000000000">+7 (700) 000-00-00</a>
-      <a class="btn btn-gold" href="#contacts">Рассчитать</a>
-      <button class="burger" aria-label="Меню" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+      <div class="langs" role="group" aria-label="Language">
+        <button data-lang="ru">RU</button><button data-lang="en">EN</button><button data-lang="zh">中文</button>
+      </div>
+      <a class="btn btn-gold" href="#contacts" data-i="cta_short"></a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
     </div>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Международная логистика · Китай — Казахстан — СНГ — Европа</div>
-    <h1>Мы соединяем рынки <span class="serif gold">и доставляем</span> ваш бизнес без границ</h1>
-    <p class="lead">Sinogate Group — транспортная компания полного цикла. Организуем международные перевозки и выступаем вашим агентом в Китае: от поиска поставщика до доставки груза на склад.</p>
+    <div class="eyebrow" data-i="hero_eyebrow"></div>
+    <h1 data-i="hero_title"></h1>
+    <p class="lead" data-i="hero_lead"></p>
     <div class="actions">
-      <a class="btn btn-gold" href="#contacts">Оставить заявку →</a>
-      <a class="btn btn-line" href="#services">Наши услуги</a>
+      <a class="btn btn-gold" href="#contacts" data-i="btn_calc"></a>
+      <a class="btn btn-line" href="#services" data-i="btn_services"></a>
     </div>
   </div>
   <canvas class="globe-cv" data-horizon="0.28" aria-hidden="true"></canvas>
-  <div class="tagline">CONNECTING MARKETS. MOVING BUSINESS.</div>
+  <div class="tagline">Connecting Markets. Moving Business Forward.</div>
 </section>
 
-<div class="stats">
+<div class="facts">
   <div class="wrap">
-    <div class="stat"><b>10+</b><span>лет на рынке логистики</span></div>
-    <div class="stat"><b>4 500</b><span>доставленных грузов в год</span></div>
-    <div class="stat"><b>25</b><span>стран в маршрутной сети</span></div>
-    <div class="stat"><b>24/7</b><span>отслеживание и поддержка</span></div>
+    <div class="fact"><b data-i="f1b"></b><span data-i="f1s"></span></div>
+    <div class="fact"><b data-i="f2b"></b><span data-i="f2s"></span></div>
+    <div class="fact"><b data-i="f3b"></b><span data-i="f3s"></span></div>
+    <div class="fact"><b data-i="f4b"></b><span data-i="f4s"></span></div>
   </div>
 </div>
 
-<section id="services">
-  <div class="wrap">
-    <div class="head reveal">
-      <div><div class="eyebrow">Международные перевозки</div><h2>Любой груз — <span class="serif gold">любым видом</span> транспорта</h2></div>
-      <p>Подбираем оптимальный маршрут по сроку и стоимости, берём на себя документы, таможню и страхование. Вы получаете груз — мы берём ответственность за путь.</p>
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow" data-i="about_eyebrow"></div>
+      <h2 data-i="about_title"></h2>
+      <p data-i="about_text"></p>
     </div>
-    <div class="services reveal">
+    <p class="quote"><small data-i="mission_label"></small><span data-i="mission"></span></p>
+  </div>
+</section>
+
+<section id="services" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow" data-i="svc_eyebrow"></div><h2 data-i="svc_title"></h2></div>
+      <p data-i="svc_lead"></p>
+    </div>
+    <div class="services">
       <div class="svc"><span class="num">01</span>
         <svg viewBox="0 0 48 48"><rect x="3" y="14" width="26" height="20"/><path d="M29 20h9l7 7v7H29z"/><circle cx="12" cy="37" r="4"/><circle cx="36" cy="37" r="4"/></svg>
-        <h3>Автоперевозки</h3><p>FTL и сборные грузы LTL из Китая через Хоргос, Алашанькоу и Бахты. Тенты, рефрижераторы, негабарит.</p></div>
+        <h3 data-i="s1t"></h3><p data-i="s1p"></p></div>
       <div class="svc"><span class="num">02</span>
-        <svg viewBox="0 0 48 48"><rect x="8" y="6" width="32" height="28" rx="4"/><path d="M8 22h32M16 34l-6 8M32 34l6 8M14 42h20"/><circle cx="16" cy="28" r="2"/><circle cx="32" cy="28" r="2"/></svg>
-        <h3>Железнодорожные</h3><p>Контейнерные поезда и вагонные отправки по Шёлковому пути. Оптимально для крупных партий.</p></div>
+        <svg viewBox="0 0 48 48"><rect x="10" y="5" width="28" height="30" rx="6"/><path d="M10 21h28"/><circle cx="17" cy="28" r="2"/><circle cx="31" cy="28" r="2"/><path d="M16 35l-6 8M32 35l6 8M13 39h22"/></svg>
+        <h3 data-i="s2t"></h3><p data-i="s2p"></p></div>
       <div class="svc"><span class="num">03</span>
-        <svg viewBox="0 0 48 48"><path d="M4 30l40-14-6 20H10z"/><path d="M16 26V12h12v9"/><path d="M2 42c4 0 4-2 8-2s4 2 8 2 4-2 8-2 4 2 8 2 4-2 8-2"/></svg>
-        <h3>Морские перевозки</h3><p>FCL и LCL через порты Шанхая, Нинбо, Шэньчжэня с доставкой «до двери» в Казахстан и СНГ.</p></div>
+        <svg viewBox="0 0 48 48"><path d="M24 4l18 9v22l-18 9-18-9V13z"/><path d="M6 13l18 9 18-9M24 22v22"/></svg>
+        <h3 data-i="s3t"></h3><p data-i="s3p"></p></div>
       <div class="svc"><span class="num">04</span>
-        <svg viewBox="0 0 48 48"><path d="M44 8L4 22l14 6 6 14 6-10 8 6z"/><path d="M18 28L44 8"/></svg>
-        <h3>Авиадоставка</h3><p>Срочные и ценные грузы из Пекина, Гуанчжоу и Урумчи. Срок — от 3 дней.</p></div>
+        <svg viewBox="0 0 48 48"><path d="M4 44V22l12 8v-8l12 8v-8l12 8V8h4v36z"/><path d="M12 38h4M22 38h4M32 38h4"/></svg>
+        <h3 data-i="s4t"></h3><p data-i="s4p"></p></div>
       <div class="svc"><span class="num">05</span>
-        <svg viewBox="0 0 48 48"><path d="M24 4l18 8v12c0 11-8 18-18 20C14 42 6 35 6 24V12z"/><path d="M16 24l6 6 11-12"/></svg>
-        <h3>Таможенное оформление</h3><p>Декларирование, сертификация, классификация ТН ВЭД, расчёт платежей. Работаем «в белую».</p></div>
+        <svg viewBox="0 0 48 48"><path d="M6 10h28v28H6z"/><path d="M14 18h12M14 25h12M14 32h7"/><path d="M30 34l5 5 9-11"/></svg>
+        <h3 data-i="s5t"></h3><p data-i="s5p"></p></div>
       <div class="svc"><span class="num">06</span>
-        <svg viewBox="0 0 48 48"><path d="M4 18L24 6l20 12v24H4z"/><rect x="14" y="26" width="20" height="16"/><path d="M14 32h20M14 37h20"/></svg>
-        <h3>Склад и консолидация</h3><p>Собственные склады в Китае: приёмка, проверка, переупаковка, маркировка и сборка партий.</p></div>
+        <svg viewBox="0 0 48 48"><circle cx="10" cy="36" r="5"/><circle cx="38" cy="12" r="5"/><path d="M14 33c10-6 4-14 14-18M33 14"/><path d="M15 36h12c8 0 8-10 0-10h-6c-8 0-8-10 0-10h12"/></svg>
+        <h3 data-i="s6t"></h3><p data-i="s6p"></p></div>
     </div>
   </div>
 </section>
 
-<section class="agent" id="agent">
-  <div class="wrap agent-grid">
-    <div class="reveal">
-      <div class="eyebrow">Агентские услуги</div>
-      <h2>Ваш представитель <span class="serif gold">в Китае</span></h2>
-      <p style="color:var(--muted)">Работаем от вашего имени: находим производителя, ведём переговоры на китайском языке, контролируем качество и оплачиваем поставщику. Вы видите каждый шаг сделки.</p>
-      <ul class="checks">
-        <li><div><b>Поиск и проверка поставщиков</b><span>Аудит фабрик, проверка лицензий и репутации, образцы.</span></div></li>
-        <li><div><b>Переговоры и закупка</b><span>Фиксируем цену, сроки и условия в контракте.</span></div></li>
-        <li><div><b>Оплата в Китай</b><span>Безопасные платежи поставщикам в юанях и долларах.</span></div></li>
-        <li><div><b>Контроль качества</b><span>Инспекция перед отгрузкой с фото- и видеоотчётом.</span></div></li>
-      </ul>
+<section class="corridor" id="corridor">
+  <div class="wrap corridor-grid">
+    <div>
+      <div class="eyebrow" data-i="cor_eyebrow"></div>
+      <h2 data-i="cor_title"></h2>
+      <p data-i="cor_text"></p>
     </div>
-    <div class="route-card reveal">
-      <div class="eyebrow">Пример маршрута</div>
-      <h3 style="font-size:22px;margin-top:10px">Гуанчжоу → Алматы, сборный груз</h3>
+    <div class="route-card">
+      <div class="eyebrow" data-i="route_label"></div>
       <div class="route">
-        <div class="stop"><span class="dot"></span><div><b>Гуанчжоу</b><span>Забор груза у поставщика, склад</span></div><em>День 1</em></div>
-        <div class="stop"><span class="dot"></span><div><b>Урумчи</b><span>Консолидация, документы</span></div><em>День 6</em></div>
-        <div class="stop"><span class="dot"></span><div><b>Хоргос</b><span>Граница, таможенное оформление</span></div><em>День 9</em></div>
-        <div class="stop"><span class="dot"></span><div><b>Алматы</b><span>Доставка до двери клиента</span></div><em>День 12</em></div>
+        <div class="stop"><span class="dot"></span><div><b data-i="r1b"></b><span data-i="r1s"></span></div></div>
+        <div class="stop"><span class="dot"></span><div><b data-i="r2b"></b><span data-i="r2s"></span></div></div>
+        <div class="stop"><span class="dot"></span><div><b data-i="r3b"></b><span data-i="r3s"></span></div></div>
+        <div class="stop"><span class="dot"></span><div><b data-i="r4b"></b><span data-i="r4s"></span></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="about">
-  <div class="wrap about-grid">
-    <div class="reveal">
-      <div class="eyebrow">О компании</div>
-      <h2>История <span class="serif gold">Sinogate Group</span></h2>
-      <p style="color:var(--muted)">Мы начинали с небольшого офиса и одной машины в месяц. Сегодня Sinogate Group — международная группа компаний с представительствами в Казахстане и Китае, собственными складами и сетью партнёров по всему Евразийскому коридору.</p>
-      <p class="quote">«Наша задача — чтобы граница между рынками перестала быть препятствием для бизнеса».</p>
+<section id="why">
+  <div class="wrap">
+    <div class="head solo">
+      <div><div class="eyebrow" data-i="why_eyebrow"></div><h2 data-i="why_title"></h2></div>
     </div>
-    <div class="timeline reveal">
-      <div class="tl"><b>2014</b><div><h4>Основание компании</h4><p>Первый офис в Алматы, автоперевозки из Урумчи.</p></div></div>
-      <div class="tl"><b>2016</b><div><h4>Офис в Китае</h4><p>Открытие представительства и склада в Урумчи, старт консолидации.</p></div></div>
-      <div class="tl"><b>2019</b><div><h4>Ж/д и мультимодальные маршруты</h4><p>Контейнерные отправки по Шёлковому пути в СНГ и Европу.</p></div></div>
-      <div class="tl"><b>2022</b><div><h4>Агентское направление</h4><p>Поиск поставщиков, закупка и оплата товаров в Китае.</p></div></div>
-      <div class="tl"><b>2026</b><div><h4>Sinogate Group</h4><p>Группа компаний, более 800 постоянных клиентов.</p></div></div>
+    <div class="why">
+      <div class="why-item"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15"/><path d="M3 18h30M18 3c5 4 6 10 6 15s-1 11-6 15c-5-4-6-10-6-15s1-11 6-15z"/></svg><h4 data-i="w1t"></h4><p data-i="w1p"></p></div>
+      <div class="why-item"><svg viewBox="0 0 36 36"><circle cx="18" cy="7" r="4"/><circle cx="7" cy="29" r="4"/><circle cx="29" cy="29" r="4"/><path d="M18 11v7M18 18l-9 7M18 18l9 7"/></svg><h4 data-i="w2t"></h4><p data-i="w2p"></p></div>
+      <div class="why-item"><svg viewBox="0 0 36 36"><path d="M3 14l7-6 6 3 6-3 11 6-5 6"/><path d="M3 14l5 7 7 7c1 1 3 1 4 0l9-8"/><path d="M14 17l5 5M17 14l6 6"/></svg><h4 data-i="w3t"></h4><p data-i="w3p"></p></div>
+      <div class="why-item"><svg viewBox="0 0 36 36"><path d="M18 3l13 5v9c0 8-6 13-13 16C11 30 5 25 5 17V8z"/><path d="M12 18l4 4 8-9"/></svg><h4 data-i="w4t"></h4><p data-i="w4p"></p></div>
     </div>
   </div>
 </section>
 
 <section id="process" style="padding-top:0">
   <div class="wrap">
-    <div class="head reveal">
-      <div><div class="eyebrow">Как мы работаем</div><h2>Пять шагов <span class="serif gold">до вашего склада</span></h2></div>
-      <p>Персональный менеджер ведёт груз от заявки до получения и держит вас в курсе на каждом этапе.</p>
+    <div class="head solo">
+      <div><div class="eyebrow" data-i="proc_eyebrow"></div><h2 data-i="proc_title"></h2></div>
     </div>
-    <div class="steps reveal">
-      <div class="step"><h4>Заявка</h4><p>Вы описываете груз и маршрут.</p></div>
-      <div class="step"><h4>Расчёт</h4><p>Готовим ставку и сроки за 1 час.</p></div>
-      <div class="step"><h4>Договор</h4><p>Фиксируем условия и ответственность.</p></div>
-      <div class="step"><h4>Перевозка</h4><p>Таможня, страховка, трекинг 24/7.</p></div>
-      <div class="step"><h4>Доставка</h4><p>Груз у вас, закрывающие документы.</p></div>
+    <div class="steps">
+      <div class="step"><h4 data-i="p1"></h4></div>
+      <div class="step"><h4 data-i="p2"></h4></div>
+      <div class="step"><h4 data-i="p3"></h4></div>
+      <div class="step"><h4 data-i="p4"></h4></div>
+      <div class="step"><h4 data-i="p5"></h4></div>
     </div>
   </div>
 </section>
 
 <section class="contact" id="contacts">
   <div class="wrap contact-grid">
-    <div class="reveal">
-      <div class="eyebrow">Контакты</div>
-      <h2>Обсудим <span class="serif gold">ваш груз</span></h2>
-      <p style="color:var(--muted)">Позвоните или оставьте заявку — менеджер свяжется в течение 15 минут в рабочее время.</p>
+    <div>
+      <div class="eyebrow" data-i="nav_contacts"></div>
+      <h2 data-i="con_title"></h2>
+      <p data-i="con_text"></p>
       <div class="offices">
-        <div class="office"><h4>Казахстан · Алматы</h4><a class="tel" href="tel:+77000000000">+7 (700) 000-00-00</a><p>пр. Аль-Фараби, 00, офис 000 · Пн–Пт 9:00–18:00</p></div>
-        <div class="office"><h4>Китай · Урумчи</h4><a class="tel" href="tel:+8600000000000">+86 000 0000 0000</a><p>WeChat / WhatsApp · склад и представительство</p></div>
-        <div class="office"><h4>Email</h4><a class="tel" href="mailto:info@sinogate.group">info@sinogate.group</a></div>
+        <div class="office"><h4>SINOGATE GROUP LIMITED</h4><span class="big">Hong Kong</span><p>www.sinogate.group</p></div>
+        <div class="office"><h4>WhatsApp</h4><a class="big" href="https://wa.me/77000000107" target="_blank" rel="noopener">+7 700 000 01 07</a></div>
+        <div class="office"><h4 data-i="phone"></h4><a class="big" href="tel:+77770014111">+7 777 001 41 11</a></div>
       </div>
+      <a class="btn btn-line btn-wa" href="https://wa.me/77000000107" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+        <span data-i="wa_btn"></span>
+      </a>
     </div>
-    <form class="reveal" onsubmit="event.preventDefault();this.querySelector('.sent').style.display='block'">
-      <h3>Рассчитать перевозку</h3>
-      <p>Ответим со ставкой и сроками доставки</p>
+    <form id="lead">
+      <h3 data-i="form_title"></h3>
+      <p data-i="form_lead"></p>
       <div class="row2">
-        <div class="field"><label>Откуда</label><input placeholder="Гуанчжоу"></div>
-        <div class="field"><label>Куда</label><input placeholder="Алматы"></div>
+        <div class="field"><label data-i="fl_name"></label><input name="name" required data-ph="fl_name"></div>
+        <div class="field"><label data-i="fl_company"></label><input name="company" data-ph="fl_company"></div>
       </div>
       <div class="row2">
-        <div class="field"><label>Вид перевозки</label><select><option>Авто</option><option>Ж/д</option><option>Море</option><option>Авиа</option><option>Не знаю — подберите</option></select></div>
-        <div class="field"><label>Вес / объём</label><input placeholder="2 т / 10 м³"></div>
+        <div class="field"><label data-i="fl_contact"></label><input name="contact" required data-ph="fl_contact"></div>
+        <div class="field"><label data-i="fl_route"></label><input name="route" data-ph="fl_route_ph"></div>
       </div>
-      <div class="row2">
-        <div class="field"><label>Имя</label><input required></div>
-        <div class="field"><label>Телефон</label><input type="tel" required placeholder="+7"></div>
-      </div>
-      <button class="btn btn-gold">Получить расчёт</button>
-      <div class="sent">Спасибо! Заявка принята (демо-форма).</div>
+      <div class="field"><label data-i="fl_cargo"></label><textarea name="cargo" rows="3" data-ph="fl_cargo_ph"></textarea></div>
+      <button class="btn btn-gold" data-i="fl_submit"></button>
+      <p class="form-note" data-i="form_note"></p>
     </form>
   </div>
 </section>
 
 <footer>
-  <div class="wrap"><span>© 2026 Sinogate Group. Connecting markets. Moving business.</span><span>Международные перевозки и агентские услуги</span></div>
+  <div class="wrap"><span>© 2026 SINOGATE GROUP LIMITED. Connecting Markets. Moving Business Forward.</span><span>Hong Kong · www.sinogate.group</span></div>
 </footer>
 
 <script>
+const T={
+ru:{
+nav_about:'О компании',nav_services:'Услуги',nav_routes:'Маршруты',nav_process:'Как мы работаем',nav_contacts:'Контакты',cta_short:'Рассчитать',
+hero_eyebrow:'Китай · Казахстан · Центральная Азия',
+hero_title:'Международная логистика. <span class="serif gold">Единое пространство</span> возможностей.',
+hero_lead:'Организуем грузоперевозки между Китаем, Казахстаном и Центральной Азией. Объединяем транспортные решения, международные маршруты и профессиональную координацию для развития вашего бизнеса.',
+btn_calc:'Рассчитать перевозку',btn_services:'Наши услуги',
+f1b:'Гонконг',f1s:'регистрация компании',f2b:'Китай — ЦА',f2s:'международные маршруты',f3b:'Авто · Ж/д',f3s:'и мультимодальные схемы',f4b:'Проекты',f4s:'тяжеловесные и негабаритные грузы',
+about_eyebrow:'О компании',about_title:'Ваш партнёр <span class="serif gold">в международной логистике</span>',
+about_text:'SINOGATE GROUP LIMITED — компания, зарегистрированная в Гонконге и специализирующаяся на международной транспортной логистике и экспедировании. Мы координируем перевозки, взаимодействуем с перевозчиками и партнёрами и разрабатываем решения с учётом требований каждого клиента.',
+mission_label:'Наша миссия',mission:'Соединять рынки, упрощать международные поставки и помогать бизнесу двигаться вперёд.',
+svc_eyebrow:'Услуги',svc_title:'Наши логистические <span class="serif gold">решения</span>',svc_lead:'Подбираем маршрут и вид транспорта под характеристики груза и координируем перевозку на каждом этапе.',
+s1t:'Автомобильные перевозки',s1p:'Организация доставки стандартных, контейнерных и промышленных грузов автомобильным транспортом.',
+s2t:'Железнодорожные перевозки',s2p:'Координация контейнерных и вагонных отправок по международным железнодорожным маршрутам.',
+s3t:'Мультимодальная логистика',s3p:'Комбинирование автомобильного и железнодорожного транспорта для эффективной организации поставок.',
+s4t:'Проектная логистика',s4p:'Разработка индивидуальных транспортных решений для промышленного оборудования, тяжеловесных и негабаритных грузов.',
+s5t:'Транспортное экспедирование',s5p:'Сопровождение перевозок, взаимодействие с отправителями, перевозчиками, терминалами и получателями.',
+s6t:'Логистика Китай — Казахстан',s6p:'Организация трансграничных поставок с учётом маршрутов, терминальных операций и особенностей грузов.',
+cor_eyebrow:'Маршруты',cor_title:'Соединяем Китай, Казахстан <span class="serif gold">и Центральную Азию</span>',
+cor_text:'Наш основной фокус — международные маршруты между китайскими производственными центрами, Казахстаном и странами Центральной Азии. Мы развиваем партнёрские решения для трансграничной и транзитной логистики.',
+route_label:'Транспортный коридор',
+r1b:'Китай',r1s:'Производственные центры, приём груза у отправителя',r2b:'Пограничный переход',r2s:'Терминальные операции и перегрузка',r3b:'Казахстан',r3s:'Доставка получателю или транзит',r4b:'Центральная Азия',r4s:'Транзитные поставки в страны региона',
+why_eyebrow:'Преимущества',why_title:'Почему выбирают <span class="serif gold">SINOGATE</span>',
+w1t:'Международный подход',w1p:'Гонконгская корпоративная структура и ориентация на международные рынки.',
+w2t:'Гибкость решений',w2p:'Подбор маршрутов и транспортных схем под характеристики груза.',
+w3t:'Партнёрская координация',w3p:'Взаимодействие с транспортными компаниями, агентами и терминалами.',
+w4t:'Прозрачность',w4p:'Согласование условий, ответственности и ключевых этапов перевозки.',
+proc_eyebrow:'Процесс',proc_title:'Как мы <span class="serif gold">работаем</span>',
+p1:'Получаем заявку и параметры груза',p2:'Анализируем маршрут и рассчитываем предложение',p3:'Согласовываем условия перевозки',p4:'Организуем и координируем доставку',p5:'Сопровождаем завершение поставки',
+con_title:'Обсудим <span class="serif gold">вашу перевозку</span>',con_text:'Отправьте параметры груза и маршрут. Мы рассмотрим ваш запрос и предложим подходящее логистическое решение.',
+phone:'Телефон',wa_btn:'Связаться через WhatsApp',
+form_title:'Запрос на перевозку',form_lead:'Заполните форму — заявка уйдёт нам в WhatsApp',
+fl_name:'Ваше имя',fl_company:'Компания',fl_contact:'Телефон или email',fl_route:'Маршрут перевозки',fl_route_ph:'Например: Гуанчжоу — Алматы',fl_cargo:'Описание груза',fl_cargo_ph:'Тип груза, вес, объём, сроки',fl_submit:'Отправить запрос',
+form_note:'Нажимая кнопку, вы откроете WhatsApp с готовым текстом заявки.',
+wa_head:'Запрос на перевозку с сайта sinogate.group',wa_name:'Имя',wa_company:'Компания',wa_contact:'Контакт',wa_route:'Маршрут',wa_cargo:'Груз'
+},
+en:{
+nav_about:'About',nav_services:'Services',nav_routes:'Routes',nav_process:'How we work',nav_contacts:'Contacts',cta_short:'Get a quote',
+hero_eyebrow:'China · Kazakhstan · Central Asia',
+hero_title:'International logistics. <span class="serif gold">One space</span> of opportunity.',
+hero_lead:'We organise freight transportation between China, Kazakhstan and Central Asia, bringing together transport solutions, international routes and professional coordination to help your business grow.',
+btn_calc:'Request a quote',btn_services:'Our services',
+f1b:'Hong Kong',f1s:'company registration',f2b:'China — CA',f2s:'international routes',f3b:'Road · Rail',f3s:'and multimodal solutions',f4b:'Projects',f4s:'heavy and oversized cargo',
+about_eyebrow:'About us',about_title:'Your partner <span class="serif gold">in international logistics</span>',
+about_text:'SINOGATE GROUP LIMITED is a Hong Kong–registered company specialising in international transport logistics and freight forwarding. We coordinate shipments, work closely with carriers and partners, and design solutions around each client’s requirements.',
+mission_label:'Our mission',mission:'To connect markets, simplify international supply and help businesses move forward.',
+svc_eyebrow:'Services',svc_title:'Our logistics <span class="serif gold">solutions</span>',svc_lead:'We match the route and mode of transport to your cargo and coordinate every stage of the shipment.',
+s1t:'Road freight',s1p:'Delivery of general, containerised and industrial cargo by road.',
+s2t:'Rail freight',s2p:'Coordination of container and wagon shipments along international rail routes.',
+s3t:'Multimodal logistics',s3p:'Combining road and rail transport for efficient supply chains.',
+s4t:'Project logistics',s4p:'Tailored transport solutions for industrial equipment, heavy-lift and oversized cargo.',
+s5t:'Freight forwarding',s5p:'End-to-end shipment support and liaison with shippers, carriers, terminals and consignees.',
+s6t:'China — Kazakhstan logistics',s6p:'Cross-border supply organised around routes, terminal operations and cargo specifics.',
+cor_eyebrow:'Routes',cor_title:'Connecting China, Kazakhstan <span class="serif gold">and Central Asia</span>',
+cor_text:'Our core focus is international routes linking China’s manufacturing hubs with Kazakhstan and the countries of Central Asia. We develop partnership-based solutions for cross-border and transit logistics.',
+route_label:'Transport corridor',
+r1b:'China',r1s:'Manufacturing hubs, pick-up from the shipper',r2b:'Border crossing',r2s:'Terminal operations and transshipment',r3b:'Kazakhstan',r3s:'Delivery to consignee or transit',r4b:'Central Asia',r4s:'Transit supply across the region',
+why_eyebrow:'Why us',why_title:'Why choose <span class="serif gold">SINOGATE</span>',
+w1t:'International approach',w1p:'Hong Kong corporate structure and a focus on international markets.',
+w2t:'Flexible solutions',w2p:'Routes and transport schemes selected for the characteristics of your cargo.',
+w3t:'Partner coordination',w3p:'Close cooperation with carriers, agents and terminals.',
+w4t:'Transparency',w4p:'Clearly agreed terms, responsibilities and key milestones of every shipment.',
+proc_eyebrow:'Process',proc_title:'How we <span class="serif gold">work</span>',
+p1:'We receive your request and cargo details',p2:'We analyse the route and prepare an offer',p3:'We agree the terms of carriage',p4:'We organise and coordinate delivery',p5:'We support the shipment through completion',
+con_title:'Let’s discuss <span class="serif gold">your shipment</span>',con_text:'Send us your cargo details and route. We will review your request and propose the right logistics solution.',
+phone:'Phone',wa_btn:'Contact us on WhatsApp',
+form_title:'Shipment request',form_lead:'Fill in the form — your request will be sent to us via WhatsApp',
+fl_name:'Your name',fl_company:'Company',fl_contact:'Phone or email',fl_route:'Route',fl_route_ph:'e.g. Guangzhou — Almaty',fl_cargo:'Cargo description',fl_cargo_ph:'Cargo type, weight, volume, timing',fl_submit:'Send request',
+form_note:'The button opens WhatsApp with your request pre-filled.',
+wa_head:'Shipment request from sinogate.group',wa_name:'Name',wa_company:'Company',wa_contact:'Contact',wa_route:'Route',wa_cargo:'Cargo'
+},
+zh:{
+nav_about:'关于我们',nav_services:'服务',nav_routes:'线路',nav_process:'合作流程',nav_contacts:'联系我们',cta_short:'询价',
+hero_eyebrow:'中国 · 哈萨克斯坦 · 中亚',
+hero_title:'国际物流<br><span class="serif gold">共享机遇空间</span>',
+hero_lead:'我们组织中国、哈萨克斯坦与中亚之间的货物运输，整合运输方案、国际线路与专业协调，助力您的业务发展。',
+btn_calc:'运输询价',btn_services:'我们的服务',
+f1b:'香港',f1s:'公司注册地',f2b:'中国 — 中亚',f2s:'国际运输线路',f3b:'公路 · 铁路',f3s:'及多式联运方案',f4b:'项目物流',f4s:'重型及超限货物',
+about_eyebrow:'关于我们',about_title:'您的<span class="serif gold">国际物流合作伙伴</span>',
+about_text:'SINOGATE GROUP LIMITED 是一家在香港注册的公司，专注于国际运输物流与货运代理。我们协调运输全过程，与承运商及合作伙伴紧密配合，并根据每位客户的需求制定解决方案。',
+mission_label:'我们的使命',mission:'连接市场，简化国际供应链，助力企业不断前行。',
+svc_eyebrow:'服务',svc_title:'我们的<span class="serif gold">物流解决方案</span>',svc_lead:'根据货物特点选择线路与运输方式，并在每个环节进行协调。',
+s1t:'公路运输',s1p:'组织普通货物、集装箱货物及工业货物的公路运输。',
+s2t:'铁路运输',s2p:'协调国际铁路线路上的集装箱及整车发运。',
+s3t:'多式联运',s3p:'结合公路与铁路运输，高效组织供应。',
+s4t:'项目物流',s4p:'为工业设备、重型及超限货物定制运输方案。',
+s5t:'货运代理',s5p:'全程跟进运输，与发货人、承运商、场站及收货人对接。',
+s6t:'中国—哈萨克斯坦物流',s6p:'综合考虑线路、场站作业及货物特点，组织跨境运输。',
+cor_eyebrow:'线路',cor_title:'连接中国、哈萨克斯坦<span class="serif gold">与中亚</span>',
+cor_text:'我们的核心业务是连接中国制造中心与哈萨克斯坦及中亚各国的国际线路，并为跨境及过境物流发展合作型解决方案。',
+route_label:'运输走廊',
+r1b:'中国',r1s:'制造中心，发货人处提货',r2b:'边境口岸',r2s:'场站作业与换装',r3b:'哈萨克斯坦',r3s:'送达收货人或过境',r4b:'中亚',r4s:'向区域各国过境运输',
+why_eyebrow:'优势',why_title:'为什么选择 <span class="serif gold">SINOGATE</span>',
+w1t:'国际化视野',w1p:'香港公司架构，面向国际市场。',
+w2t:'灵活的方案',w2p:'根据货物特点选择线路与运输方案。',
+w3t:'协同合作',w3p:'与运输公司、代理及场站紧密协作。',
+w4t:'透明可靠',w4p:'明确约定运输条件、责任与关键环节。',
+proc_eyebrow:'流程',proc_title:'<span class="serif gold">合作流程</span>',
+p1:'接收询价及货物信息',p2:'分析线路并制定报价',p3:'确认运输条件',p4:'组织并协调运输',p5:'跟进直至交付完成',
+con_title:'洽谈<span class="serif gold">您的运输需求</span>',con_text:'请发送货物信息及运输线路，我们将评估您的需求并提供合适的物流方案。',
+phone:'电话',wa_btn:'通过 WhatsApp 联系',
+form_title:'运输询价',form_lead:'填写表格，询价将通过 WhatsApp 发送给我们',
+fl_name:'您的姓名',fl_company:'公司',fl_contact:'电话或邮箱',fl_route:'运输线路',fl_route_ph:'例如：广州 — 阿拉木图',fl_cargo:'货物描述',fl_cargo_ph:'货物类型、重量、体积、时效',fl_submit:'提交询价',
+form_note:'点击按钮将打开 WhatsApp 并自动填写询价内容。',
+wa_head:'来自 sinogate.group 的运输询价',wa_name:'姓名',wa_company:'公司',wa_contact:'联系方式',wa_route:'线路',wa_cargo:'货物'
+}};
+let L='ru';
+function setLang(l){
+  if(!T[l])l='ru';L=l;const d=T[l];
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-i]').forEach(e=>{const v=d[e.dataset.i];if(v!=null)e.innerHTML=v});
+  document.querySelectorAll('[data-ph]').forEach(e=>e.placeholder=d[e.dataset.ph]);
+  document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  try{localStorage.setItem('sg_lang',l)}catch(e){}
+}
+document.querySelectorAll('.langs button').forEach(b=>b.onclick=()=>{setLang(b.dataset.lang);history.replaceState(null,'','#'+b.dataset.lang)});
+let init=location.hash.slice(1);
+if(!T[init]){try{init=localStorage.getItem('sg_lang')}catch(e){}}
+if(!T[init]){const n=(navigator.language||'').slice(0,2);init=n==='zh'?'zh':n==='en'?'en':'ru'}
+setLang(init);
+document.getElementById('lead').onsubmit=e=>{
+  e.preventDefault();const f=e.target,d=T[L],v=k=>f.elements[k].value.trim();
+  const msg=[d.wa_head,d.wa_name+': '+v('name'),v('company')&&d.wa_company+': '+v('company'),d.wa_contact+': '+v('contact'),v('route')&&d.wa_route+': '+v('route'),v('cargo')&&d.wa_cargo+': '+v('cargo')].filter(Boolean).join('\n');
+  window.open('https://wa.me/77000000107?text='+encodeURIComponent(msg),'_blank');
+};
 const h=document.querySelector('header');
 addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>40));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>document.getElementById('menu').classList.remove('open'));
 </script>
 <script>(function(){
