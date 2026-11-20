@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SINOGATE GROUP LIMITED — международная логистика</title>
-<meta name="description" content="SINOGATE GROUP LIMITED — международная логистика между Китаем, Казахстаном и Центральной Азией: автомобильные, железнодорожные, мультимодальные и проектные перевозки.">
+<title>SINOGATE GROUP LIMITED — International Logistics</title>
+<meta name="description" content="SINOGATE GROUP LIMITED — international logistics between China, Kazakhstan and Central Asia: road, rail, multimodal and project cargo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -188,7 +188,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     </nav>
     <div class="nav-cta">
       <div class="langs" role="group" aria-label="Language">
-        <button data-lang="ru">RU</button><button data-lang="en">EN</button><button data-lang="zh">中文</button>
+        <button data-lang="en">EN</button><button data-lang="zh">中文</button><button data-lang="ru">RU</button>
       </div>
       <a class="btn btn-gold" href="#contacts" data-i="cta_short"></a>
       <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
@@ -452,19 +452,17 @@ fl_name:'您的姓名',fl_company:'公司',fl_contact:'电话或邮箱',fl_route
 form_note:'点击按钮将打开 WhatsApp 并自动填写询价内容。',
 wa_head:'来自 sinogate.group 的运输询价',wa_name:'姓名',wa_company:'公司',wa_contact:'联系方式',wa_route:'线路',wa_cargo:'货物'
 }};
-let L='ru';
+let L='en';
 function setLang(l){
-  if(!T[l])l='ru';L=l;const d=T[l];
+  if(!T[l])l='en';L=l;const d=T[l];
   document.documentElement.lang=l;
   document.querySelectorAll('[data-i]').forEach(e=>{const v=d[e.dataset.i];if(v!=null)e.innerHTML=v});
   document.querySelectorAll('[data-ph]').forEach(e=>e.placeholder=d[e.dataset.ph]);
   document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
-  try{localStorage.setItem('sg_lang',l)}catch(e){}
 }
 document.querySelectorAll('.langs button').forEach(b=>b.onclick=()=>{setLang(b.dataset.lang);history.replaceState(null,'','#'+b.dataset.lang)});
 let init=location.hash.slice(1);
-if(!T[init]){try{init=localStorage.getItem('sg_lang')}catch(e){}}
-if(!T[init]){const n=(navigator.language||'').slice(0,2);init=n==='zh'?'zh':n==='en'?'en':'ru'}
+if(!T[init])init='en';
 setLang(init);
 document.getElementById('lead').onsubmit=e=>{
   e.preventDefault();const f=e.target,d=T[L],v=k=>f.elements[k].value.trim();
